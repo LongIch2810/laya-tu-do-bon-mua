@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #090909;
+  --surface-1: #141414;
+  --surface-2: #1c1c1c;
+  --hairline: #262626;
+  --hairline-soft: #1a1a1a;
+  --ink: #ffffff;
+  --ink-muted: #999999;
+  --accent-blue: #0099ff;
+  --gradient-magenta: #d44df0;
+  --gradient-violet: #6a4cf5;
+  --gradient-orange: #ff7a3d;
+  --gradient-coral: #ff5577;
+}
+
+html,
+body {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden !important;
+  background-color: #090909;
+  color: #ffffff;
+  user-select: none;
+}
+
+/* Typography Negative Tracking (DESIGN.md Poster Signature) */
+.tracking-display-xxl {
+  letter-spacing: -0.05em;
+}
+
+.tracking-display {
+  letter-spacing: -0.04em;
+}
+
+.tracking-headline {
+  letter-spacing: -0.03em;
+}
+
+.tracking-body {
+  letter-spacing: -0.015em;
+}
+
+/* Ánh sáng quét Laser Scanner (DESIGN.md Accent Blue) */
+@keyframes laserSweep {
+  0% {
+    top: 0%;
+    opacity: 0.9;
+  }
+  50% {
+    top: 96%;
+    opacity: 1;
+  }
+  100% {
+    top: 0%;
+    opacity: 0.9;
+  }
+}
+
+.animate-laser {
+  animation: laserSweep 1.6s ease-in-out infinite;
+}
+
+/* Hiệu ứng Flash khi Critical Hit */
+@keyframes impactFlash {
+  0% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.04);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+}
+
+.animate-impact-flash {
+  animation: impactFlash 0.35s ease-out forwards;
+}
+
+/* Seasonal Gradient Atmosphere Glows (DESIGN.md Signature) */
+.glow-spring {
+  text-shadow: 0 0 15px rgba(212, 77, 240, 0.7), 0 0 30px rgba(255, 85, 119, 0.5);
+  box-shadow: 0 0 30px rgba(212, 77, 240, 0.2);
+}
+
+.glow-summer {
+  text-shadow: 0 0 15px rgba(255, 122, 61, 0.8), 0 0 30px rgba(255, 122, 61, 0.5);
+  box-shadow: 0 0 30px rgba(255, 122, 61, 0.2);
+}
+
+.glow-autumn {
+  text-shadow: 0 0 15px rgba(106, 76, 245, 0.8), 0 0 30px rgba(106, 76, 245, 0.5);
+  box-shadow: 0 0 30px rgba(106, 76, 245, 0.2);
+}
+
+.glow-winter {
+  text-shadow: 0 0 15px rgba(0, 153, 255, 0.8), 0 0 30px rgba(0, 153, 255, 0.5);
+  box-shadow: 0 0 30px rgba(0, 153, 255, 0.2);
+}
